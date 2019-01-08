@@ -1,0 +1,209 @@
+@import "_fonts"
+@import "_libs"
+@import "_vars"
+
+*
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+	&:before, &:after
+		-webkit-box-sizing: border-box
+		-moz-box-sizing: border-box
+		box-sizing: border-box
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+html, body
+	height: 100%
+	font-size: 1rem
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	background-color: #7478D8
+	color: $color_text
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+.text-center
+	text-align: center
+
+::selection
+	background-color: $accent
+	color: #fff
+
+
+// **************************************************************************
+.logo
+	border-radius: 50em
+	overflow: hidden
+	//box-shadow: 0 0 0.62rem rgba(0,0,0,.38)
+	width: 4.5rem
+	height: 4.5rem
+	display: inline-block
+	vertical-align: middle
+	img
+		width: 100%
+	svg
+		width: 100%
+		height: auto
+
+
+.header
+	text-align: center
+	background-image: url('../img/banana/bg-coding.png')
+	//background-image: url('https://webmaker.org/img/thimble-pattern@2x.png')
+	background-size: 20rem
+	background-color: #fff
+	min-height: 100vh
+	position: relative
+	display: flex
+	align-items: center
+	width: 100%
+	overflow: hidden
+	display: flex
+	&::after
+		display: block
+		content: ''
+		top: 0
+		left: 0
+		bottom: 0
+		right: 0
+		position: absolute
+		z-index: 1
+		background-color: rgba(240,240,240,.5)
+		transition: background-color 500ms 
+	.container
+		//border: 1px dotted red
+		position: relative
+		z-index: 3
+
+	.logo
+		margin: 0 0.5em 0 0
+		display: inline-block
+		box-shadow: 0 0 8px #444
+	.header_site-name
+		font-family: 'Fira Sans'
+		font-size: 1.5em
+		padding: 0.15em 0.75em
+		background-color: $color_text
+		border-radius: 100em
+		color: $color_accent_2
+		//box-shadow: 0 0 0.62rem rgba(0,0,0,.38)	
+		display: inline-block
+		vertical-align: middle
+		line-height: 1
+		letter-spacing: 0px
+		//font-style: italic
+	.header-video
+		iframe
+			box-shadow: 6px 6px 12px 2px rgba(0,0,0,0.5)
+			margin-left: 200%
+			transition: margin 1500ms
+			&.loaded
+				margin-left: 0
+	.header-greeting
+		text-align: left
+	.header-video
+		text-align: left
+
+	.header_site-caption
+		font-family: 'Open Sans'
+		font-weight: 800
+		font-size: 2em
+		line-height: 1.4
+
+	.top-panel
+		position: absolute
+		top: 0
+		right: 0
+		width: 100%
+		text-align: right
+		z-index: 3
+		padding: 2rem
+		button
+			margin: 0
+			border: none
+			background-color: #fff
+			background: transparent
+			font-size: 1.75rem
+			color: #111
+			padding: 0
+			line-height: 1em
+			transition: all 300ms
+			&:hover
+				cursor: pointer				
+				color: $color_accent_2
+
+@keyframes hero-skew-animation
+	0%
+		transform: skew(0deg) translateX(0%)
+	100%
+		transform: skew(-12deg) translateX(55%)
+._rel-wrapper
+	position: relative
+	width: 100%
+	//background-color: red
+.hero-skew
+    background-color: $color_accent
+    width: 100%
+    height: 100vh
+    position: absolute
+    top: 0px
+    right: 0px
+.hero-skew
+	display: flex
+	z-index: 2
+	&.hero-animation
+		animation: hero-skew-animation 1000ms ease-in-out 0s
+		animation-fill-mode: forwards
+		transform: skew(-10deg) translateX(68%)
+	.btn-down
+		position: absolute
+		background-color: $color_text
+		width: 5rem
+		line-height: 5rem
+		bottom: 0
+		left: 0
+		color: $color_accent_2
+		font-size: 2.5em
+		&.loaded
+		i
+			transform: skew(10deg)
+
+.article
+
+
+
+
+
+// **************************************************************************
+@import "media" // Всегда в конце
